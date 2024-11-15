@@ -1,0 +1,267 @@
+This solution was completed by:
+<student name #1>
+<student name #2 (if no partner write "N/A")>
+
+Running default test files:
+
+
+--------------- START OF OUTPUT FOR room-Small01.txt -----------------
+
+Base room:
+
+*****
+*  A*
+*   *
+*****
+
+Room after algorithm:
+
+*****
+*CBA*
+*DCB*
+*****
+
+--------------- END OF OUTPUT FOR room-Small01.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Small02.txt -----------------
+
+Base room:
+
+*****
+*A  *
+*** *
+*   *
+*****
+
+Room after algorithm:
+
+*****
+*ABC*
+***D*
+*GFE*
+*****
+
+--------------- END OF OUTPUT FOR room-Small02.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Medium01.txt -----------------
+
+Base room:
+
+**************
+* A          *
+*    *       *
+*    *       *
+*  ***       *
+*            *
+*     *****  *
+*     ***    *
+**************
+
+Room after algorithm:
+
+**************
+*BABCDEFGHIJK*
+*CBCD*FGHIJKL*
+*DCDE*GHIJKLM*
+*ED***HIJKLMN*
+*FEFGHIJKLMNO*
+*GFGHI*****OP*
+*HGHIJ***RQPQ*
+**************
+
+--------------- END OF OUTPUT FOR room-Medium01.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Medium02.txt -----------------
+
+Base room:
+
+**************
+*  A         *
+* **** ***** *
+* *    *   * *
+* * **** *** *
+* * *  * *   *
+*      * * ***
+* **** * * * *
+* *    * * ***
+*** ****** * *
+* *        * *
+**************
+
+Room after algorithm:
+
+**************
+*CBABCDEFGHIJ*
+*D****E*****K*
+*E*IHGF*   *L*
+*F*J**** ***M*
+*G*K*MN* *PON*
+*HIJKLM* *Q***
+*I****N* *R* *
+*J*RQPO* *S***
+***S******T* *
+* *TUVWXWVU* *
+**************
+
+--------------- END OF OUTPUT FOR room-Medium02.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Long01.txt -----------------
+
+Base room:
+
+**********************************
+*   A                            *
+**********************************
+
+Room after algorithm:
+
+**********************************
+*DCBABCDEFGHIJKLMNOPQRSTUVWXYZZZZ*
+**********************************
+
+--------------- END OF OUTPUT FOR room-Long01.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Long02.txt -----------------
+
+Base room:
+
+**********************************
+*                                *
+******************************** *
+******************************** *
+*                                *
+* ********************************
+* ********************************
+*                                *
+******************************** *
+******************************** *
+*  A                             *
+**********************************
+
+Room after algorithm:
+
+**********************************
+*ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ*
+********************************Z*
+********************************Z*
+*ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ*
+*Z********************************
+*Z********************************
+*ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ*
+********************************Z*
+********************************Z*
+*CBABCDEFGHIJKLMNOPQRSTUVWXYZZZZZ*
+**********************************
+
+--------------- END OF OUTPUT FOR room-Long02.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Large01.txt -----------------
+
+Base room:
+
+**********************************
+*  ** *   *   *             *    *
+*  ** * * * * *********** ****** *
+* A   * * * *                    *
+*  **   *   * ****************** *
+*  ** ******* **   *   *   *   * *
+*                *   *   *   *   *
+*  ** ************ ***************
+*  ** *          *               *
+*     ************ ***************
+*  **              *             *
+*  ** ************ ***************
+*     *          *               *
+**********************************
+
+Room after algorithm:
+
+**********************************
+*DC**F*JKL*TUT*ZZZZZZZZZZZZZ*ZZZZ*
+*CB**E*I*M*S*S***********Z******Z*
+*BABCD*H*N*R*RSTUVWXYZZZZZZZZZZZZ*
+*CB**EFG*OPQ*Q******************Z*
+*DC**F*******P**STU*YZZ*ZZZ*ZZZ*Z*
+*EDEFGHIJKLMNOPQR*VWX*ZZZ*ZZZ*ZZZ*
+*FE**H************W***************
+*GF**I*          *XYZZZZZZZZZZZZZ*
+*HGHIJ************Y***************
+*IH**KLMNOPQRSTUVWX*             *
+*JI**L************Y***************
+*KJKLM*          *ZZZZZZZZZZZZZZZ*
+**********************************
+
+--------------- END OF OUTPUT FOR room-Large01.txt -----------------
+
+
+--------------- START OF OUTPUT FOR room-Large02.txt -----------------
+
+Base room:
+
+**********************************
+*  ** *   *   *             *    *
+* A** * * * * *********** ****** *
+*     * * * *                    *
+*  **   *   * ****************** *
+*  ** ******* **   *   *   *   * *
+*                *   *   *   *   *
+*  ** ************ ***************
+*  ** *          *               *
+*     ************ ***************
+*  **              *             *
+*  ** ************ ***************
+*     *          *               *
+* ********************************
+* ********************************
+*  ** *   *   *             *    *
+*  ** * * * * *********** ****** *
+*     * * * *                    *
+*  **   *   * ****************** *
+*  ** ******* **   *   *   *   * *
+*                *   *   *   *   *
+*  ** ************ ***************
+*  ** *          *               *
+*     ************ ***************
+*  **              *             *
+*  ** ************ ***************
+*     *          *               *
+**********************************
+
+Room after algorithm:
+
+**********************************
+*CB**G*KLM*UVU*ZZZZZZZZZZZZZ*ZZZZ*
+*BA**F*J*N*T*T***********Z******Z*
+*CBCDE*I*O*S*STUVWXYZZZZZZZZZZZZZ*
+*DC**FGH*PQR*R******************Z*
+*ED**G*******Q**TUV*ZZZ*ZZZ*ZZZ*Z*
+*FEFGHIJKLMNOPQRS*WXY*ZZZ*ZZZ*ZZZ*
+*GF**I************X***************
+*HG**J*          *YZZZZZZZZZZZZZZ*
+*IHIJK************Z***************
+*JI**LMNOPQRSTUVWXY*             *
+*KJ**M************Z***************
+*LKLMN*          *ZZZZZZZZZZZZZZZ*
+*M********************************
+*N********************************
+*OP**W*ZZZ*ZZZ*ZZZZZZZZZZZZZ*ZZZZ*
+*PQ**V*Z*Z*Z*Z***********Z******Z*
+*QRSTU*Y*Z*Z*ZZZZZZZZZZZZZZZZZZZZ*
+*RS**VWX*ZZZ*Z******************Z*
+*ST**W*******Z**ZZZ*ZZZ*ZZZ*ZZZ*Z*
+*TUVWXYZZZZZZZZZZ*ZZZ*ZZZ*ZZZ*ZZZ*
+*UV**Y************Z***************
+*VW**Z*          *ZZZZZZZZZZZZZZZ*
+*WXYZZ************Z***************
+*XY**ZZZZZZZZZZZZZZ*             *
+*YZ**Z************Z***************
+*ZZZZZ*          *ZZZZZZZZZZZZZZZ*
+**********************************
+
+--------------- END OF OUTPUT FOR room-Large02.txt -----------------

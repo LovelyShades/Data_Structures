@@ -1,0 +1,232 @@
+\documentclass[12pt]{elsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\newcommand{\field}[1]{\mathbb{#1}}
+
+\usepackage{hyperref}
+ 
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{qtree}
+
+\usepackage{enumitem}
+
+\usepackage[letterpaper,top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+\Large  CS2124 Data Structures \\
+\large {\bf Assignment 3 - Recursion Program}\\
+\end{center}
+
+{\bf Description} 
+
+Jethro and Cletus are quarantined at home and bored. They spend most of their day sitting at their computer monitor working or browsing the internet in their small apartment. Out of boredom Jethro begins counting the number of steps needed to reach each location in their small apartment. After seeing that taking different paths from their computer to their coffee maker yields different numbers of steps a question dawns on them. They want to know what is the fewest number of steps needed to reach {\bf all} of the locations in their small apartment starting from their computer.  
+
+Fortunately, Jethro is quite skilled at ASCII art. So they model their room with ASCII characters. A space ` ' can be moved through. An asterisk `*' is a wall or furniture that cannot be traversed (no climbing over furniture!).  Going up, down, left, right one space takes exactly one step (we'll assume no diagonal movements for that sake of simplicity). For example, here is a possible model of their room:
+
+{\small
+\begin{verbatim}
+**************
+* A          *
+*    *       *
+*    *       *
+*  ***       *
+*            *
+*     *****  *
+*     ***    *
+**************
+\end{verbatim}
+}
+
+Assume that (0, 0) is the upper lefthand corner.  For the sake of simplicity you can assume the apartment is enclosed in `*' characters and that the location of Jethro's computer has been marked with an `A'.
+
+Jethro is still new to programming and wants to hire you to write the program to label all of the ` ' locations in their apartment with the minimum number of steps needed to reach them.  To keep with the ASCII art theme you'll use the letters A-Z Such that:
+
+{\small
+\begin{verbatim}
+`A' is 0 steps 
+`B' is 1 step 
+`C' is 2 steps
+...
+`Y' is 24 steps
+`Z' is 25 (or more) steps
+\end{verbatim}
+}
+
+\newpage
+
+Here's some example rooms:
+
+{\bf  Example 1: }
+
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Base room:
+*****
+*A  *
+*** *
+*   *
+*****
+\end{verbatim}
+}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Room after algorithm:
+*****
+*ABC*
+***D*
+*GFE*
+*****
+\end{verbatim}
+}
+\end{minipage}
+
+(We can't pass through the `*' symbols)
+
+\vfill
+
+
+{\bf  Example 2: }
+
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Base room:
+**************
+* A          *
+*    *       *
+*    *       *
+*  ***       *
+*            *
+*     *****  *
+*     ***    *
+**************
+\end{verbatim}
+}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Room after algorithm:
+**************
+*BABCDEFGHIJK*
+*CBCD*FGHIJKL*
+*DCDE*GHIJKLM*
+*ED***HIJKLMN*
+*FEFGHIJKLMNO*
+*GFGHI*****OP*
+*HGHIJ***RQPQ*
+**************
+\end{verbatim}
+}
+\end{minipage}
+
+\vfill
+
+{\bf Example 3:  }
+
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Base room:
+**********************************
+*   A                            *
+**********************************
+\end{verbatim}
+}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Room after algorithm:
+**********************************
+*DCBABCDEFGHIJKLMNOPQRSTUVWXYZZZZ*
+**********************************
+\end{verbatim}
+}
+\end{minipage}
+
+(We don't count past `Z' since Jethro has a pretty small apartment)
+
+\vfill
+
+{\bf Example 4: }
+
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Base room:
+*******
+*A    *
+****  *
+*  *  *
+****  *
+*     *
+*******
+\end{verbatim}
+}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+{\small
+\begin{verbatim}
+Room after algorithm:
+*******
+*ABCDE*
+****EF*
+*  *FG*
+****GH*
+*KJIHI*
+*******
+\end{verbatim}
+}
+\end{minipage}
+
+(Unreachable ` ' areas should remain unchanged)
+
+\vfill
+
+\newpage
+
+{\bf Part 1 - Programming: (15 points)}
+
+Write a brute force {\bf recursive} program to solve the problem described above in $paintRoom.c$.  
+
+{\bf Hint 1:} This program will take fewer lines of code than previous one but you'll need to think about and test them carefully.  For reference, my $recPaintRoom$ only had 10 lines of code in it.
+
+{\bf Hint 2:} From any given space, you need to try to continue moving up, down, left, and right (i.e. 4 recursive calls).
+
+{\bf Hint 3:} Your algorithm can move into a `*', but upon recognizing it as an obstacle, it should return from that call.
+
+{\bf Hint 4:} It may help to track the distance traveled so far from the starting `A' character.
+
+{\bf Hint 5:} Only updating locations that contain a ` ` won't be enough.  Sometimes you'll need to update a location you previously visited and labeled.
+
+{\bf Hint 6:} chars can be treated like small valued integers.  In particular, it may be helpful to use operations like `$+$' and `$<=$' with your chars.\\
+
+
+{\bf Part 2 - Runtime: (5 points)}
+
+What is the runtime complexity of your algorithm?  There are multiple reasonable answers and the answer depends on your code so you should also {\bf justify your reasoning} in order to receive credit.\\
+
+
+{\bf Deliverables:}
+
+Your program solution should be submitted as ``paintRoom.c'' (also submit any additional files you created to solve this problem).  Your solutions to part 2 should be submitted as a text file (.txt, .pdf, or .doc).
+
+Upload these files to Blackboard under Assignment 3.  {\bf Do not zip your files}. 
+
+To receive full credit, your code must compile and execute. You should use valgrind to ensure that you do not have any memory leaks.
+
+\vfill
+
+\end{document}
