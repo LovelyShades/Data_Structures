@@ -1,2 +1,1 @@
-# School2024
-Data Structures and More
+Data Structures Class 2024
